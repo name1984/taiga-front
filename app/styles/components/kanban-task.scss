@@ -4,7 +4,7 @@
     margin: .2rem;
     position: relative;
     &:last-child {
-        margin: 0;
+        margin-bottom: 0;
     }
     &:hover {
         .icon-edit,
@@ -92,7 +92,32 @@
             color: darken($postit-hover, 15%);
         }
     }
+    &.task-archived {
+        background: darken($whitish, 5%);
+        padding: .5rem 1rem;
+        text-align: center;
+        .kanban-task-inner {
+            padding: 0;
+        }
+        .task-archived-text {
+            flex: 1;
+        }
+        span {
+            color: $gray-light;
+        }
+        p {
+            @extend %small;
+            color: $gray-light;
+            margin: 0;
+            &:last-child {
+                color: $gray;
+                margin: .5rem 0;
+                text-align: center;
+            }
+        }
+    }
 }
+
 
 .kanban-task-maximized {
     .kanban-task-inner {

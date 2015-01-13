@@ -43,4 +43,4 @@ div.kanban-table(tg-kanban-squish-column)
 
                 div.kanban-task(ng-repeat="us in usByStatus[s.id] track by us.id",
                                 tg-kanban-userstory, ng-model="us",
-                                ng-class="ctrl.getCardClass(s.id)")
+                                class="{{ctrl.getCardClass(s.id)}}", ng-class="{'task-archived': us.isArchived}")
